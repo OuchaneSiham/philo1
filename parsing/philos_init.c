@@ -6,16 +6,16 @@
 /*   By: souchane <souchane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/25 14:40:10 by souchane          #+#    #+#             */
-/*   Updated: 2024/08/25 15:28:47 by souchane         ###   ########.fr       */
+/*   Updated: 2024/09/02 13:24:31 by souchane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "../philo.h"
+
 void	parse_args(t_content *philo, char **av)
 {
 	philo->phs_nb = ft_atoi(av[1]);
-	philo->die_time= ft_atoi(av[2]);
+	philo->die_time = ft_atoi(av[2]);
 	philo->eat_time = ft_atoi(av[3]);
 	philo->sleep_time = ft_atoi(av[4]);
 	if (av[5])
@@ -24,9 +24,7 @@ void	parse_args(t_content *philo, char **av)
 		philo->meals_num_to_eat = -1;
 }
 
-// Initializing the philosophers
-
-int 	initialize_phs(t_content *phs, t_philo *philo, pthread_mutex_t *n_forks,
+int	initialize_phs(t_content *phs, t_philo *philo, pthread_mutex_t *n_forks,
 		char **av)
 {
 	int	i;
@@ -51,5 +49,5 @@ int 	initialize_phs(t_content *phs, t_philo *philo, pthread_mutex_t *n_forks,
 			phs[i].right_fork = &n_forks[i - 1];
 		i++;
 	}
-	return 0;
+	return (0);
 }

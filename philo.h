@@ -6,7 +6,7 @@
 /*   By: souchane <souchane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/25 11:37:10 by souchane          #+#    #+#             */
-/*   Updated: 2024/08/31 10:02:37 by souchane         ###   ########.fr       */
+/*   Updated: 2024/09/02 13:47:19 by souchane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,6 @@ typedef struct s_content
 	pthread_mutex_t	*gone_mutex;
 	pthread_mutex_t	*check_meal_mutex;
 }					t_content;
-
-
-
 typedef struct s_philo
 {
 	int				gone_flag;
@@ -54,22 +51,26 @@ typedef struct s_philo
 // about time
 long long	get_time(void);
 // int		ft_delay(long long milliseconds);
-int	ft_delay(t_content *phs, long milliseconds);
+int			ft_delay(t_content *phs, long milliseconds);
 // utils
-int	ft_atoi(const char *str);
-void	ft_putstr_fd(char *s, int fd);
+int			ft_atoi(const char *str);
+void		ft_putstr_fd(char *s, int fd);
 // moves
-void	printing(t_content *philo, int id, char *move);
-void eating_action(t_content *phs);
+void		printing(t_content *philo, int id, char *move);
+void		eating_action(t_content *phs);
 // init
-int	check_args(char **av);
-int	init_mutex(t_philo *philo, t_content *phs, pthread_mutex_t *n_forks, int num_ph);
-int	initialize(t_philo *philo, t_content *phs, pthread_mutex_t *n_forks, char **av);
-int 	initialize_phs(t_content *phs, t_philo *philo, pthread_mutex_t *n_forks, char **av);
+int			check_args(char **av);
+int			init_mutex(t_philo *philo, t_content *phs,
+				pthread_mutex_t *n_forks, int num_ph);
+int			initialize(t_philo *philo, t_content *phs,
+				pthread_mutex_t *n_forks, char **av);
+int			initialize_phs(t_content *phs, t_philo *philo,
+				pthread_mutex_t *n_forks, char **av);
 // simulation
-void  *tracking(void *sole_arg);
-int create_threads(t_philo *simu, pthread_t *watcher);
-int join_threads(t_philo *simu, pthread_t watcher);
-int destroy_threads(t_philo *philo, pthread_mutex_t *n_forks);
-int simulation(t_philo *philos, pthread_mutex_t *n_forks);
+void		*tracking(void *sole_arg);
+int			create_threads(t_philo *simu, pthread_t *watcher);
+int			join_threads(t_philo *simu, pthread_t watcher);
+int			destroy_threads(t_philo *philo, pthread_mutex_t *n_forks);
+int			simulation(t_philo *philos, pthread_mutex_t *n_forks);
+
 #endif
