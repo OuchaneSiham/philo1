@@ -6,7 +6,7 @@
 /*   By: souchane <souchane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/25 12:38:41 by souchane          #+#    #+#             */
-/*   Updated: 2024/09/02 13:43:33 by souchane         ###   ########.fr       */
+/*   Updated: 2024/09/03 19:21:42 by souchane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ int	main(int ac, char **av)
 {
 	int				result;
 	t_philo			philo;
-	t_content		phs[300];
-	pthread_mutex_t	n_forks[300];
+	t_content		phs[MAXIMUM];
+	pthread_mutex_t	n_forks[MAXIMUM];
 
 	if (ac != 5 && ac != 6)
 	{

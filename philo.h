@@ -6,7 +6,7 @@
 /*   By: souchane <souchane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/25 11:37:10 by souchane          #+#    #+#             */
-/*   Updated: 2024/09/02 13:47:19 by souchane         ###   ########.fr       */
+/*   Updated: 2024/09/03 19:20:49 by souchane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <stdlib.h>
 # include <sys/time.h>
 # include <unistd.h>
-# define PHILO_MAX 300
+# define MAXIMUM 300
 
 typedef struct s_content
 {

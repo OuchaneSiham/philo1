@@ -6,7 +6,7 @@
 /*   By: souchane <souchane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/25 13:22:31 by souchane          #+#    #+#             */
-/*   Updated: 2024/09/02 13:19:57 by souchane         ###   ########.fr       */
+/*   Updated: 2024/09/03 16:55:52 by souchane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	check_args(char **av)
 {
-	if (ft_atoi(av[1]) > 200 || ft_atoi(av[1]) <= 0 || ft_atoi(av[2]) <= 0
+	if (ft_atoi(av[1]) > MAXIMUM || ft_atoi(av[1]) <= 0 || ft_atoi(av[2]) <= 0
 		|| ft_atoi(av[3]) <= 0 || ft_atoi(av[4]) <= 0)
 	{
 		ft_putstr_fd("ERROR: invalid args\n", 2);
